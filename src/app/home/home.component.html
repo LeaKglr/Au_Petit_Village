@@ -1,0 +1,81 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div>
+    <header>
+        <app-header></app-header>
+    </header>
+    <main class="main">
+        <div class="Presentation">
+            <h1> {{ title }} </h1>
+            <div id="presentationEntreprise">
+                <p> {{ presentation }} </p>
+                <img src="assets/Figurines/Bienvenue.jpg" alt="Logo d'un célèbre personnage de la bande dessinée Astérix et Obélix tenant un panneau en bois avec écrit Bienvenue à Bord.">
+            </div>
+            
+            <a href="" class="btn" (click)="navigateToAbout($event)">{{ btnpresentation }}</a>
+        </div>
+        <div>
+            <div class="bar">
+                <h2> {{ sousTitre }} </h2>
+                <div>
+                    <input type="text" name="search"
+                        placeholder="Rechercher" 
+                        style="width: 450px; padding: 5px 5px 5px 10px;"
+                        [(ngModel)]="filterByName">
+                </div>
+                
+                <div id="filtrePrix">
+                    <p>Filtrer par prix :</p>
+                    <button class="btn" (click)="toggleOrdreDeTri()">
+                    {{ getOrdreTri() }}
+                </button>
+                </div>
+                
+
+            </div>
+            
+            <div>
+                
+                <div id="Card"  class="row row-cols-1 row-cols-md-3 g-4" >
+                    <div id="card" class="col" *ngFor="let figurine of figurines | filterByName: filterByName | sortByPrice:(sortAsc ? 'asc' : 'desc')">
+                        <div class="card h-100 border-dark" style="width: 22rem;" *ngIf="figurine">
+                            <div id="card-picture">
+                                <img src="{{figurine.img}}" alt="{{figurine.alt}}" class="card-img-top">  
+                            </div>
+                            <div class="card-body">
+                              <h3 class="card-title">{{figurine.name}}</h3>
+                              <div id="price">
+                                <p id="prix">{{figurine.price}}€</p>
+                                <a href="" class="btn" (click)="navigateToFigurineDetails($event, figurine)"> {{textbtn}}</a>
+                              </div>
+                              
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+
+            </div>
+            
+        </div>
+    </main>
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>
+
+  
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  
