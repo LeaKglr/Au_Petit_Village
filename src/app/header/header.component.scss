@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'BubbleBoddyRegular';
+    src: url('/assets/Fonts/bubbleboddyneue-regulartrial.ttf');
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/assets/Fonts/Comfortaa-Regular.ttf');
+}
+
+h1, h2{
+    font-family: 'BubbleBoddyRegular';
+}
+
+p, a, button {
+    font-family: 'Comfortaa';
+}
+
+nav {
+    background-color: #151217;
+        
+    #logo {
+        margin-left: 50px;
+    }
+
+    #btn {
+        color: #ffffff;
+        margin-right: 5px;            
+
+        .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+    }
+
+    #navbarNav {
+        flex-basis: 100%;
+    }
+
+    .nav-link {
+        color: #da001e;
+        padding: 0 70px 0 70px;
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    img {
+                width: 90px;
+                height: auto;
+                border-radius: 5%;
+            }
+}

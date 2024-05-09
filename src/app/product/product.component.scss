@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'BubbleBoddyRegular';
+    src: url('/assets/Fonts/bubbleboddyneue-regulartrial.ttf');
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/assets/Fonts/Comfortaa-Regular.ttf');
+}
+
+h1, h2{
+    font-family: 'BubbleBoddyRegular';
+}
+
+p, a, button {
+    font-family: 'Comfortaa';
+}
+
+.figurine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9d0a3;
+    padding: 10px;
+
+    .produit {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+
+        .imgdetails {
+            margin: 10px 100px 10px 10px;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+        }
+
+        #prix {
+            margin-top: 50px;
+        }
+
+        table {
+            margin-top: 30px;
+        }
+    }
+}
+

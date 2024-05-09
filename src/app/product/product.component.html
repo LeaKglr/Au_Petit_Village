@@ -1,0 +1,46 @@
+<div>
+  <header>
+    <app-header></app-header>
+</header> 
+<main class="main">
+  <div *ngIf="figurine" class="figurine"> 
+    <h2>{{figurine.name}}</h2>
+    <div class="produit">
+      <div class="imgdetails">
+        <img src="{{figurine.img}}" alt="{{figurine.alt}}"> 
+      </div>
+      <div class="details">
+        <p>{{figurine.presentation}}</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>Dimensions du produit (L x l x h) : </th>
+              <td>
+                {{figurine.dimensions}}
+              </td> 
+            </tr>
+            <tr>
+              <th>Age recommandé : </th>
+              <td>
+                {{figurine.age}}
+              </td> 
+            </tr>
+            <tr>
+              <th>Nombre de pièces : </th>
+              <td>
+                {{figurine.piece}}
+              </td> 
+            </tr>
+          </tbody>
+        </table>
+        <p id="prix">Prix : {{figurine.price}}€</p>
+    </div>
+  </div>
+    
+  </div>
+</main>
+<footer>
+  <app-footer></app-footer>
+</footer>
+</div>
+
